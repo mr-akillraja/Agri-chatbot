@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soil Type Prediction</title>
+</head>
+<body style="text-align:center; font-family:sans-serif; margin-top:50px;">
+    <h2>Upload an Image to Predict Soil Type</h2>
+    <form action="/predict/" enctype="multipart/form-data" method="post">
+        <input name="file" type="file" accept="image/*" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h3>Prediction Result:</h3>
+        <p><strong>Class:</strong> {{ result.class }}</p>
+        <p><strong>Confidence:</strong> {{ result.confidence | round(3) }}</p>
+    {% endif %}
+</body>
+</html>

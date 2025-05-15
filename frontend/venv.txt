@@ -1,0 +1,6 @@
+cd C:\Users\ADMIN\Downloads\chatbot-main
+>>
+>> py -3.10 -m venv .venv310
+>>
+>> .\.venv310\Scripts\activate
+>>
